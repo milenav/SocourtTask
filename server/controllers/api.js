@@ -1,14 +1,36 @@
 const Genre = require('../models/Genre')
+const Book = require('../models/Book')
 
 module.exports = {
     genresGet: (req, res) => {
-        //res.render('./index')
-
-        Genre.find({}).then(genres => {
-            res.json(genres);
-
+        Genre.find().then(genres => {
+            res.status(200).json(genres);
           })
-
-
+    },
+    booksGet: (req, res) => {
+        Book.find().then(books => {
+            res.status(200).json(books)
+        })
+    },
+    getBookById: (req, res) => {
+        const id = req.params.id
+        Book.findById(id).then(book => {
+            if (book != null) {
+                res.status(200).json(book)
+            } else {
+                res.status(404).send("Not Found!");
+            }
+        });
+    },
+    getGenreById: (req, res) => {
+        const id = req.params.id
+        Genre.findById(id).then(genre => {
+            if (genre != null) {
+                res.status(200).json(genre)
+            } else {
+                res.status(404).send("Not Found!");
+            }
+        });
     }
+
 }

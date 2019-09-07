@@ -14,11 +14,3 @@ module.exports = {
     port: process.env.PORT
   } 
 }
-
-/*module.exports = {
-    development: {
-        port: process.env.PORT || 3000,
-        dbPath: 'mongobd://localhost:27017/library-db'
-    },
-    production: {}
-}*/
