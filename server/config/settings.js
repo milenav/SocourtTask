@@ -1,0 +1,24 @@
+const path = require('path')
+
+let rootPath = path.normalize(path.join(__dirname, '/../'))
+
+module.exports = {
+  development: {
+    rootPath: rootPath,
+    db: 'mongodb://localhost:27017/library',
+    port: 3000
+  },
+  staging: {
+  },
+  production: {
+    port: process.env.PORT
+  } 
+}
+
+/*module.exports = {
+    development: {
+        port: process.env.PORT || 3000,
+        dbPath: 'mongobd://localhost:27017/library-db'
+    },
+    production: {}
+}*/

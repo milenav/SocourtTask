@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-import logo from './logo.svg';
-
 import './App.css';
 
 class App extends Component {
-  state = {
+  render() {
+    return (
+      <div>Hello</div>
+    )
+  }
+ /* state = {
     response: ''
   };
 
@@ -34,7 +37,7 @@ class App extends Component {
         <p className="App-intro">{this.state.response}</p>
       </div>
     );
-  }
+  }*/
 }
 
 export default App;
