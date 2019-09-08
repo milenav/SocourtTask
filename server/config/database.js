@@ -14,7 +14,7 @@ module.exports = (settings) => {
     }
     console.log('MongoDB ready!')
     Genre.seedGenres();
-    Book.seedBooks
+    Book.seedBooks();
   })
   db.on('error', err => console.log(`Database error: ${err}`))
 }

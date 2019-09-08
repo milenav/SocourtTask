@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import BookAll from '../components/book-all';
 
 
-class Home extends Component {
+class Book extends Component {
     render() {
         return(
             <BookAll />
@@ -10,4 +10,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Book;
