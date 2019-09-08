@@ -14,7 +14,7 @@ const Genre = mongoose.model('Genre', genreSchema);
 module.exports = Genre;
 module.exports.seedGenres = () => {
     Genre.find({}).then(genres => {
-      //if (genres.length > 0) return
+      if (genres.length > 0) return
       console.log("Creating genres!");
   
       Genre.create({

@@ -15,7 +15,7 @@ const Navigation = () => {
         <Link className="nav-link" to="/books">Books<span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/api/genres">Genres</Link>
+        <Link className="nav-link" to="/genres">Genres</Link>
       </li>
     </ul>
   </div>
