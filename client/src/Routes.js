@@ -2,12 +2,15 @@ import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import Navigation from './components/navigation'
 
+import Home from './views/home';
 import Book from './views/book';
 import Genre from './views/genre';
+
 import BookDetails from './components/book-details';
 import BookSearch from './components/book-search';
 import GenreDetails from './components/genre-details';
 import GenreSearch from './components/genre-search';
+
 
 
 const Routes = () => (
@@ -16,6 +19,7 @@ const Routes = () => (
         <Navigation />
         <div className='container'>
         <Switch>
+        <Route exact path='/' component={Home}/>
         <Route exact path='/books' component={Book}/>
         <Route exact path='/genres' component={Genre}/>
         <Route exact path='/books/:id' component={BookDetails}/>
