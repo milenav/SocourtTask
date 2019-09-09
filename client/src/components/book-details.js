@@ -34,7 +34,6 @@ class BookDetails extends Component {
     async componentDidMount() {
         
        try {
-            //const books = await BookAll.service.getBooksByName("Test Book");
             const { params } = this.props.match;
 
             if (params && params.id) {

@@ -8,7 +8,7 @@ module.exports = (settings) => {
   mongoose.connect(settings.db, { useNewUrlParser: true })
   let db = mongoose.connection
 
-  db.once('open', err => {
+  db.once('open', (err) => {
     if (err) {
       throw err
     }

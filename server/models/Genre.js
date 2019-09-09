@@ -15,17 +15,16 @@ module.exports.seedGenres = () => {
       if (genres.length > 0) return
       
       console.log("Creating genres!");
-  
-      Genre.create({
-        name: "Test"
-      })
-
-      Genre.create({
-        name: "Drama"
-      })
-
-      Genre.create({
-        name: "Horror"
-      })
+      return Promise.all([
+        Genre.create({
+          name: "Test"
+        }),
+        Genre.create({
+          name: "Drama"
+        }),
+        Genre.create({
+          name: "Horror"
+        })
+      ])
     })
 }
