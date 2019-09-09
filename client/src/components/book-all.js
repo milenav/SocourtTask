@@ -65,7 +65,6 @@ class BookAll extends Component {
     async componentDidMount() {
 
         try {
-            //const books = await BookAll.service.getBooksByName("Test Book");
             const books = await BookAll.service.getAllBooks();
 
             this.setState({ books })
