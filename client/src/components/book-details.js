@@ -16,13 +16,15 @@ class BookDetails extends Component {
         const { loadedBook } = this.state;
 
         return (
-                    <div className="col-lg-4 mb-4">
+                    <div className="col-lg-6 mb-4">
                     
                     <div className="card mt-5 ml-5">
                         <div className="card-body">
                             <h5 className="card-title">Name: {loadedBook.name}</h5>              
-                            <p className="card-text">Author: {loadedBook.author}</p>
-                            <p className="card-text">Created: {loadedBook.createdAt}</p>
+                            <h6 className="card-subtitle mb-2 text-muted">Author: {loadedBook.author}</h6>
+                            <h6 className="card-subtitle mb-2 text-muted">{loadedBook.genre}</h6>
+                            <p className="card-text"><span className="card-subtitle mb-2 text-muted">Created: </span>{loadedBook.createdAt}</p>
+                            <p className="card-text"><span className="card-subtitle mb-2 text-muted">Updated: </span>{loadedBook.updatedAt}</p>
                         </div>
                     </div> 
                     </div>

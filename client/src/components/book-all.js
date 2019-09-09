@@ -40,17 +40,18 @@ class BookAll extends Component {
 
         return (
             <Fragment>
-                <form className="form-inline ml-auto">
-                    <div className="md-form my-0">
-                        <input className="form-control" type="text" placeholder="Search" aria-label="Search"
+                <form>
+                    <div className="row my-5 d-flex justify-content-center">
+                    <div className="col-6">
+                        <input className="form-control form-control-lg" type="text" placeholder="Search" aria-label="Search"
                             value={this.state.searchQuery}
                             onChange={this.handleSearchInput} />
                     </div>
-
-                    <button onClick={this.getBooksByName}>Search</button>
+                    <button className="btn btn-dark btn-xs" onClick={this.getBooksByName}>Search</button>
+                    </div>
                 </form>
 
-                <div className="row">
+                <div className="row d-flex justify-content-center">
                     {
                         books.map((book, i) => (
                             <SingleBook key={i} {...book} />
