@@ -7,8 +7,6 @@ const bookSchema = new Schema({
     name: { type: Schema.Types.String },
     author: { type: Schema.Types.String },
     genre: { type: Schema.Types.ObjectId, ref: 'Genre'},
-    // dateCreated: { type: Schema.Types.Date, default: Date.now },
-    // dateUpdated: { type: Schema.Types.Date, default: Date.now }
 }, bookSchemaOptions)
 
 const Book = mongoose.model('Book', bookSchema);

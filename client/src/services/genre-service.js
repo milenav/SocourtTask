@@ -11,7 +11,6 @@ class GenreService {
         let res = await callAPI('/genres');
         return res.json()
 
-        //return get(`${this.baseUrl}/books`)
     }
 }
 

@@ -19,13 +19,13 @@ class GenreAll extends Component {
         return (
             <Fragment>
                 <div className="row">
-                    <div className="col-xs-12 col-md-4">
+                    
                         {
                             genres.map((genre, i) => (
                                 <SingleGenre key={i} {...genre} />
                             ))
                         }
-                    </div>
+                   
                 </div>
             </Fragment>
         )

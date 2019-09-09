@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const SingleGenre = ({ name, createdAt, updatetAt, id }) => {
     return (
+        <div className="col-lg-4 mb-4">
         <div className="card mt-5 ml-5">
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>              
@@ -12,6 +13,7 @@ const SingleGenre = ({ name, createdAt, updatetAt, id }) => {
                 <Link to={`/api/genre/${id}`} className="card-link">This Genre</Link>
             </div>
         </div> 
+        </div>
     )
 }
 

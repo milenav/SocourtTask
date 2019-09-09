@@ -11,7 +11,18 @@ class BookService {
         let res = await callAPI('/books');
         return res.json()
 
-        //return get(`${this.baseUrl}/books`)
+    }
+
+    async getBooksById(id) {
+        let res = await callAPI(`/book/${id}`);
+        return res.json()
+
+    }
+
+    async getBooksByName(bookName) {
+        let res = await callAPI('/books/search', "POST", { search: bookName } );
+        return res.json()
+
     }
 }
 

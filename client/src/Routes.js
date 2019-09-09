@@ -4,6 +4,8 @@ import Navigation from './components/navigation'
 
 import Book from './views/book';
 import Genre from './views/genre';
+import BookDetails from './components/book-details';
+import BookSearch from './components/book-search';
 
 
 const Routes = () => (
@@ -14,6 +16,8 @@ const Routes = () => (
         <Switch>
         <Route exact path='/books' component={Book}/>
         <Route exact path='/genres' component={Genre}/>
+        <Route exact path='/books/:id' component={BookDetails}/>
+        <Route exact path='/books/search' component={BookSearch} />
         </Switch>
         </div>
     </div>
