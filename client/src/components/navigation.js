@@ -16,8 +16,6 @@ class Navigation extends Component {
               <Link className="nav-link" to="/books">Books<span className="sr-only">(current)</span></Link>
             </li>
 
-            
-
             <li className="nav-item">
               <Link className="nav-link" to="/genres">Genres</Link>
             </li>

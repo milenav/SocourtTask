@@ -15,7 +15,6 @@ class GenreAll extends Component {
       this.getGenresByName = this.getGenresByName.bind(this);
       this.handleSearchInput = this.handleSearchInput.bind(this);
     }
-    
 
     static service = new GenreService();
 
@@ -60,7 +59,6 @@ class GenreAll extends Component {
                             <SingleGenre key={i} {...genre} />
                         ))
                     }
-
                 </div>
             </Fragment>
         )

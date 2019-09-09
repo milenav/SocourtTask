@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const bookSchemaOptions = { timestamps: true };
 
 const genreSchema = new Schema({
-    name: { type: Schema.Types.String},
+    name: { type: Schema.Types.String, required: true },
 }, bookSchemaOptions)
 
 const Genre = mongoose.model('Genre', genreSchema);

@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const bookSchemaOptions = { timestamps: true };
 
 const bookSchema = new Schema({
-    name: {type: Schema.Types.String},
-    author: { type: Schema.Types.String },
+    name: {type: Schema.Types.String, required: true},
+    author: { type: Schema.Types.String, required: true },
     genre: { type: Schema.Types.ObjectId, ref: 'Genre', populate: true},
 }, bookSchemaOptions)
 
@@ -43,14 +43,12 @@ module.exports.seedBooks = () => {
             name: "Test Book 2",
             author: "Test author 2",
             genre: foundGenre
-            // genre: Genre.find({ name: 'Test' })
           })
     
           Book.create({
             name: "Test Book 3",
             author: "Test author 3",
             genre: foundGenre
-            // genre: Genre.find({ name: 'Test' })
           })
         })
     }) 

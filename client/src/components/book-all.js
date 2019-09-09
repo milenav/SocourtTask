@@ -64,7 +64,6 @@ class BookAll extends Component {
     }
 
     async componentDidMount() {
-
         try {
             const books = await BookAll.service.getAllBooks();
 

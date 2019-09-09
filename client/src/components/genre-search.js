@@ -24,7 +24,6 @@ class GenreSearch extends Component {
                                 <GenreAll key={i} {...genre} />
                             ))
                         }  
-
                 </div>
             </Fragment>
         )
@@ -37,8 +36,7 @@ class GenreSearch extends Component {
             this.setState({ genres})
         } catch(error) {
             console.error(error)  
-        }
-        
+        }       
     }
 }
 

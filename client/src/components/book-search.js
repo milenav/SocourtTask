@@ -24,7 +24,6 @@ class BookSearch extends Component {
                                 <BookAll key={i} {...book} />
                             ))
                         }  
-
                 </div>
             </Fragment>
         )
